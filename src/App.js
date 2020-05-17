@@ -16,7 +16,11 @@ class App extends Component {
 
   computeDisplay(phrase, usedLetters) {  
 	
-    return phrase.replace(/\w/g,    (letter) => (usedLetters.has(letter) ? letter : '_'))
+    return laPrase.replace(/\w/g,    (letter) => (usedLetters.has(letter) ? letter : '_'))
+  }
+
+  con(){
+    console.log("Tu marches");
   }
 
 
@@ -33,6 +37,7 @@ class App extends Component {
             {Array.from(laPrase).map((index,key)=>(
               <span key={key}> {"_"} </span>
             ))}
+            <button onClick={this.computeDisplay}>valider</button> 
         </div>
       </div>
     );
